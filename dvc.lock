@@ -1,10 +1,10 @@
 scannet:
   cmd: poetry run python mix3d/datasets/preprocessing/scannet_preprocessing.py preprocess
-    --git_repo=data/raw/scannet/ScanNet --data_dir=data/raw/scannet/scannet --save_dir=data/processed/scannet
+    --git_repo=data/raw/scannet/ScanNet --data_dir=data/raw/scannet/ScannetData --save_dir=data/processed/scannet
   deps:
   - path: mix3d/datasets/preprocessing/scannet_preprocessing.py
-    md5: 5dc8b5c780b52387a0a089dc6ce2b975
-    size: 8282
+    md5: dbe5d4c564f9a1f88e397955952c8d3b
+    size: 8407
   outs:
   - path: data/processed/scannet/color_mean_std.yaml
     md5: b4133226ce4355042a07b3103ae36268
@@ -17,25 +17,25 @@ scannet:
     size: 654429908
     nfiles: 100
   - path: data/processed/scannet/test_database.yaml
-    md5: 82a2c6adc0950a426bf2a674ee0cb34e
-    size: 19177
+    md5: 2464c9904c3bb4529f3970716c6eb946
+    size: 19577
   - path: data/processed/scannet/train
-    md5: 748fadadfd3559bd373ebb9359302390.dir
+    md5: 2ab3d050d6f76bac6ff2015c86617277.dir
     size: 7671558524
     nfiles: 1201
   - path: data/processed/scannet/train_database.yaml
-    md5: 09cc6652f21f5a0afaaebdc4d546c5db
-    size: 945128
+    md5: 97bbaaaac6baf9a94f4a4bb78d1950b9
+    size: 969148
   - path: data/processed/scannet/train_validation_database.yaml
-    md5: cd7d908371e8ac7e33f08a0c8694dd53
-    size: 1192350
+    md5: 6f33eca660fc33c9cda8bc63068af78a
+    size: 1222610
   - path: data/processed/scannet/validation
-    md5: 317bfecc9976716a929042f194935e49.dir
+    md5: 10ac890716aea98bcaef11e561922ce2.dir
     size: 2179824928
     nfiles: 312
   - path: data/processed/scannet/validation_database.yaml
-    md5: 0702f5f6ab1d54e77c9f3877561b6e08
-    size: 247222
+    md5: 3c885ccbf36d20146151676239524fd8
+    size: 253462
 scannet_instance:
   cmd: poetry run python mix3d/datasets/preprocessing/scannet_preprocessing.py make_instance_database
     --train_database_path=data/processed/scannet/train_database.yaml --git_repo=data/raw/scannet/ScanNet

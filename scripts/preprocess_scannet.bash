@@ -14,8 +14,9 @@
 # or this one https://github.com/statgen/SLURM-examples
 # https://github.com/cdt-data-science/cluster-scripts
 
-DATA_DIR="data/raw/scannet/scannet"
+DATA_DIR="data/raw/scannet/ScannetData"
 SAVE_DIR="data/processed/scannet"
+#SAVE_DIR="home/Database/ScannetData_Pro/scannet"
 GIT_REPO="data/raw/scannet/ScanNet"
 
 command_exists () {

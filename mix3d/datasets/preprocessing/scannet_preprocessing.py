@@ -17,8 +17,10 @@ from mix3d.utils.point_cloud_utils import load_ply_with_normals
 class ScannetPreprocessing(BasePreprocessing):
     def __init__(
         self,
-        data_dir: str = "./data/raw/scannet/scannet",
+        # data_dir: str = "./data/raw/scannet/scannet",
+        data_dir: str = './data/raw/scannet/ScannetData',
         save_dir: str = "./data/processed/scannet",
+        # save_dir: str = "home/Database/ScannetData_Pro/scannet",
         modes: tuple = ("train", "validation", "test"),
         n_jobs: int = -1,
         git_repo: str = "./data/raw/scannet/ScanNet",

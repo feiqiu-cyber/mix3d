@@ -1,7 +1,7 @@
 stages:
   scannet:
     cmd: poetry run python mix3d/datasets/preprocessing/scannet_preprocessing.py
-      preprocess --git_repo=data/raw/scannet/ScanNet --data_dir=data/raw/scannet/scannet
+      preprocess --git_repo=data/raw/scannet/ScanNet --data_dir=data/raw/scannet/ScannetData
       --save_dir=data/processed/scannet
     deps:
     - mix3d/datasets/preprocessing/scannet_preprocessing.py
@@ -15,6 +15,15 @@ stages:
     - data/processed/scannet/train_validation_database.yaml
     - data/processed/scannet/validation
     - data/processed/scannet/validation_database.yaml
+#      - home/Database/ScannetData_Pro/scannet/color_mean_std.yaml
+#      - home/Database/ScannetData_Pro/scannet/label_database.yaml
+#      - home/Database/ScannetData_Pro/scannet/test
+#      - home/Database/ScannetData_Pro/scannet/test_database.yaml
+#      - home/Database/ScannetData_Pro/scannet/train
+#      - home/Database/ScannetData_Pro/scannet/train_database.yaml
+#      - home/Database/ScannetData_Pro/scannet/train_validation_database.yaml
+#      - home/Database/ScannetData_Pro/scannet/validation
+#      - home/Database/ScannetData_Pro/scannet/validation_database.yaml
   scannet_instance:
     cmd: poetry run python mix3d/datasets/preprocessing/scannet_preprocessing.py
       make_instance_database --train_database_path=data/processed/scannet/train_database.yaml

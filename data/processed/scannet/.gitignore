@@ -1,0 +1,9 @@
+/color_mean_std.yaml
+/label_database.yaml
+/test
+/test_database.yaml
+/train
+/train_database.yaml
+/train_validation_database.yaml
+/validation
+/validation_database.yaml
